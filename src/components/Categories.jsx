@@ -1,6 +1,9 @@
 import "./../scss/components/_categories.scss";
+import React, {useState} from "react";
 
 function Categories() {
+  const [activeCategory, setActiveCategory] = useState("");
+
   return (
     <div className="categories">
               <ul>
