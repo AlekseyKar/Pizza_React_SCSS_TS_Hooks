@@ -1,9 +1,9 @@
-/* eslint-disable no-undef */
-/* eslint-disable react/jsx-no-undef */
 import Categories from './components/Categories';
 import Header from './components/Header';
 import PizzaBlock from './components/PizzaBlock';
 import Sort from './components/Sort';
+
+import pizzas from './data';
 import './scss/app.scss';
 
 function App() {
