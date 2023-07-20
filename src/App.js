@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/jsx-no-undef */
 import Categories from './components/Categories';
 import Header from './components/Header';
@@ -18,8 +19,11 @@ function App() {
             </div>
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
-              <PizzaBlock title="Мясные" price="12"/>
-              <PizzaBlock title="Мясные" price="12"/>
+              {
+                pizzas.map((pizza) => (
+                  <PizzaBlock key={pizza.id} {...pizza} />
+                ))
+              }
             </div>
           </div>
         </div>
