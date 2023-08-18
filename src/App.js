@@ -1,8 +1,9 @@
-/* eslint-disable react/jsx-no-undef */
 import Categories from './components/Categories';
 import Header from './components/Header';
 import PizzaBlock from './components/PizzaBlock';
 import Sort from './components/Sort';
+
+import pizzas from './data';
 import './scss/app.scss';
 
 function App() {
@@ -18,8 +19,11 @@ function App() {
             </div>
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
-              <PizzaBlock title="Мясные" price="12"/>
-              <PizzaBlock title="Мясные" price="12"/>
+              {
+                pizzas.map((pizza) => (
+                  <PizzaBlock key={pizza.id} {...pizza} />
+                ))
+              }
             </div>
           </div>
         </div>
